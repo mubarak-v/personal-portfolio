@@ -1,0 +1,28 @@
+{
+  "socialLinks": [
+    {
+      "iconClass": "fab fa-dribbble",
+      "name": "Dribbble",
+      "url": "#",
+      "active": false
+    },
+    {
+      "iconClass": "fab fa-behance",
+      "name": "Behance",
+      "url": "#",
+      "active": false
+    },
+    {
+      "iconClass": "fab fa-twitter",
+      "name": "Twitter",
+      "url": "#",
+      "active": false
+    },
+    {
+      "iconClass": "fab fa-linkedin",
+      "name": "LinkedIn",
+      "url": "#",
+      "active": false
+    }
+  ]
+}

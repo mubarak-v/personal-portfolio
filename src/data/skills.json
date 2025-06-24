@@ -1,0 +1,41 @@
+{
+    "skills": [
+      {
+        "name": "Python",
+        "proficiency": 95,
+        "category": "Backend Development",
+        "description": "Strong foundation for backend logic, automation, and scripting."
+      },
+      {
+        "name": "Django",
+        "proficiency": 90,
+        "category": "Web Framework",
+        "description": "Powerful backend framework used to build scalable web applications."
+      },
+      {
+        "name": "React.js",
+        "proficiency": 75,
+        "category": "Frontend Development",
+        "description": "Frontend library for building dynamic, component-based user interfaces."
+      },
+      {
+        "name": "JavaScript (ES6+)",
+        "proficiency": 85,
+        "category": "Frontend Development",
+        "description": "Core language for building interactive websites and full stack apps."
+      },
+      {
+        "name": "SEO & Digital Marketing",
+        "proficiency": 50,
+        "category": "Marketing",
+        "description": "Search engine optimization and strategy for online visibility and growth."
+      },
+      {
+        "name": "Git & GitHub",
+        "proficiency": 85,
+        "category": "Tools & Version Control",
+        "description": "Version control for managing code, collaborating, and deploying projects."
+      }
+    ]
+  }
+  

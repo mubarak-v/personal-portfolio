@@ -1,0 +1,17 @@
+
+{
+    "firstname":"Husni ",
+    "lastname":"Mubarak",
+    
+    "age":"23",
+    "phone":"+91 97460 70802",
+    "email":"husnimubarakvattoli1@gmail.com",
+    "address":"2661 Hich meadow lane bear creek",
+    "profession":"Web Developer",
+    "Birthday":"  May 20, 2002",
+    "Gender":"Male",
+    "Nationality":"Indian",
+    
+    "Discription":"I specialize in Python, Django, Flask, React, HTML, CSS, and JavaScript to build dynamic, user-friendly web applications. Alongside development, I also work on digital marketing strategies to help businesses grow their online presence. Whether you're looking for custom web development or full digital solutions, I deliver high-performance, scalable results tailored to your business needs. Explore my portfolio to see impactful projects and discover how I can help bring your ideas to life", 
+    "Language":" Malayalam, English"
+}
