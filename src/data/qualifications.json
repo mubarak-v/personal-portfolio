@@ -1,0 +1,21 @@
+{
+    "education": [
+      {
+        "degree": "Bachelor of Computer Applications (BCA)",
+        "institution": "Indira Gandhi National Open University (IGNOU)",
+        "year": "2025 – Present",
+        "status": "Pursuing",
+        "location": "India",
+        "description": "Currently pursuing a BCA degree with a focus on foundational and advanced concepts in computer science and application development."
+      },
+      {
+        "degree": "Higher Secondary Education",
+        "institution": "Mass College, Malappuram",
+        "year": "2018 – 2020",
+        "status": "Completed",
+        "location": "Malappuram, Kerala",
+        "description": "Completed higher secondary education with a focus on computer science and general studies."
+      }
+    ]
+  }
+  

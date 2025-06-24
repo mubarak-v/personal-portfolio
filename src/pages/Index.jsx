@@ -6,16 +6,7 @@ export const Index = (props) => {
 <>
 
 <head>
-  {/* <!-- Meta Tags -->
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Laralink">
-  <!-- Page Title -->
-  <title>Davis - Personal Portfolio</title>
-  <!-- Favicon Icon -->
-  <link rel="icon" href="assets/img/favicon.png" />
-  <!-- Stylesheets --> */}
+ 
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/fontawesome.css" />
   <link rel="stylesheet" href="assets/css/slick.css" />
@@ -31,7 +22,7 @@ export const Index = (props) => {
       <div class="container">
         <div class="st-main-header-in">
           <div class="st-main-header-left">
-            <a class="st-site-branding" href="index.html"><img src="assets/img/logo.png" alt="Davis" /></a>
+            <a class="st-site-branding" href="index.html"><img src="assets/img/logo.png" alt="Husni mubarak" /></a>
           </div>
           <div class="st-main-header-right">
             <div class="st-nav">

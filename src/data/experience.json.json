@@ -1,0 +1,32 @@
+{
+    "experience": [
+      {
+        "role": "Digital Marketer",
+        "company": "Royaaleo Dental Care",
+        "year": "2024 – Present",
+        "description": "Manage the clinic's digital marketing strategy, including Instagram promotions, content creation, patient engagement, and growing the brand's online presence.",
+        "location": "Chenguvetty, Kurubani, opposite to VIRAD Hotel, near Memorice, Kottakkal, Kerala 676503",
+        "map": "https://maps.app.goo.gl/oufc1TVwdZGvpGcDA",
+        "website": "https://royaaleo.com/"
+      },
+      {
+        "role": "Intern / Full Stack Developer Trainee",
+        "company": "Upcode Software Lab",
+        "year": "2024 – 2025",
+        "description": "Learning full stack development using Python, Django, and React. Focused on mastering core concepts, building small projects, and improving frontend-backend integration.",
+        "location": "Kuttaloor, Safeway Arcade, near Al Ihsan English School, Vengara, Kerala 676304",
+        "map": "https://maps.app.goo.gl/pYjBVofpMco35Uui9",
+        "website": "https://upcode.in/"
+      },
+      {
+        "role": "Data Entry Operator",
+        "company": "Excel Online Center",
+        "year": "2021 – 2024",
+        "description": "Handled document preparation, digital form submissions, customer assistance, and gained practical experience in office tools and computer-based services.",
+        "location": "Up Hill, Malappuram, Kerala 676505",
+        "map": "",
+        "website": ""
+      }
+    ]
+  }
+  

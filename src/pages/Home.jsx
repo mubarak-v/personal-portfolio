@@ -3,9 +3,10 @@ import 'jquery.ripples';
 import socialLinksData from '../data/socialLinks.json';
 import personalData from '../data/personalDetails.json';
 import service from '../data/services.json'
+import education from '../data/qualifications.json'
 import skills from '../data/skills.json'
 import heroImg from  "../assets/img/section/hero-img.jpg";
-
+import experience from '../data/experience.json'
 import logo from "../assets/img/logo.png";
 import aboutImg from "../assets/img/section/about.jpg";
 import quote from "../assets/img/icon/quote.png";
@@ -71,15 +72,7 @@ export const Home = () => {
 
 
 <head>
-{/* <Helmet>
-  <title>Davis - Personal Portfolio</title>
-  <link rel="icon" href={favicon} />
-</Helmet> */}
-{/* <script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/wow.min.js"></script>
-<script src="/assets/js/slick.min.js"></script>
-<script src="/assets/js/lightgallery.min.js"></script>
-<script src="/assets/js/main.js"></script> */}
+
 
  
 </head>
@@ -90,7 +83,7 @@ export const Home = () => {
       <div className="container">
         <div className="st-main-header-in">
           <div className="st-main-header-left">
-            <a className="st-site-branding" href="index.html"><img src={logo} alt="Davis"/></a>
+            <a className="st-site-branding" href="index.html"><img src={logo} alt="husni mubarak"/></a>
           </div>
           <div className="st-main-header-right">
             <div className="st-nav">
@@ -266,13 +259,9 @@ export const Home = () => {
         <div className="col-lg-6">
           <div className="st-skill-wrap">
             <div className="st-skill-heading">
-              <h2 className="st-skill-title">All the skills that I have in that field
-                of work are mentioned.</h2>
-              <div className="st-skill-subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores. <br /><br />Stet clita kasd gubergren, no sea takimata
-                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                sed diam nonumy eirmod tempor invidunt.
+              <h2 className="st-skill-title">{personalData.skillsHeading}</h2>
+              <div className="st-skill-subtitle"> {personalData.skillsDescription.paragraph1} <br /><br />
+              {personalData.skillsDescription.paragraph2}
               </div>
             </div>
             {/* <!-- .st-skill-heading --> */}
@@ -295,8 +284,8 @@ export const Home = () => {
                   <h3 className="st-progressbar-title">{skill.name}   </h3>
                   <div className="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s"> {skill.proficiency}% </div>
                 </div>
-                <div className="st-progressbar" data-progress="75">
-                  <div className="st-progressbar-in wow fadeInLeft"></div>
+                <div className="st-progressbar" data-progress={skill.proficiency}>
+                  <div className="st-progressbar-in" style={{width: `${skill.proficiency}%`}}></div>
                 </div>
               </div>
               </>
@@ -338,7 +327,8 @@ export const Home = () => {
             <div className="st-height-b50 st-height-lg-b30"></div>
 
             <div className="st-resume-timeline-wrap">
-              <div className="st-resume-timeline">
+          
+            {/* <div className="st-resume-timeline">
                 <h3 className="st-resume-timeline-title">Senior UX/UI Designer</h3>
                 <div className="st-resume-timeline-duration">Jan 2020 - Present</div>
                 <h4 className="st-resume-timeline-subtitle">Bergnaum, Hills and Howe</h4>
@@ -346,9 +336,35 @@ export const Home = () => {
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                     ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
                 </div>
-              </div> 
+              </div>  */}
+
+
+                {
+
+                  experience.experience.map((item,index)=>(
+                    <>
+                    {index !== 0 && <div  className="st-height-b50 st-height-lg-b30"></div>}
+              <div key={index} className="st-resume-timeline">
+                <h3 className="st-resume-timeline-title">{item.role}</h3>
+                <div className="st-resume-timeline-duration">{item.year}</div>
+                <a href={item.website} target="_blank" rel="noopener noreferrer" style={{contain:item.company}} className="animated-link">
+                <h4  className="st-resume-timeline-subtitle animated-link">{item.company}</h4>
+              </a>
+
+                <div className="st-resume-timeline-text">
+                  <p>{item.description}</p>
+                </div>
+                      </div>
+                    </>
+                  ))
+                }
+
+
+
+
+             
               {/* <!-- st-resume-timeline --> */}
-              <div className="st-height-b50 st-height-lg-b30"></div>
+              {/* <div className="st-height-b50 st-height-lg-b30"></div>
               <div className="st-resume-timeline">
                 <h3 className="st-resume-timeline-title">Product Designer</h3>
                 <div className="st-resume-timeline-duration">Jan 2016 - December 2019</div>
@@ -357,9 +373,9 @@ export const Home = () => {
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                     ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
                 </div>
-              </div> 
+              </div>  */}
               {/* <!-- st-resume-timeline --> */}
-              <div className="st-height-b50 st-height-lg-b30"></div>
+              {/* <div className="st-height-b50 st-height-lg-b30"></div>
               <div className="st-resume-timeline">
                 <h3 className="st-resume-timeline-title">UI/UX Designer</h3>
                 <div className="st-resume-timeline-duration">Jan 2014 - December 2015</div>
@@ -368,7 +384,7 @@ export const Home = () => {
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                     ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
                 </div>
-              </div> 
+              </div>  */}
               {/* <!-- st-resume-timeline --> */}
             </div>
           </div>
@@ -383,20 +399,33 @@ export const Home = () => {
               <img src={resumeIcon2} alt="resume-icon"/>
               <h2 className="st-resume-heading-title">Education</h2>
             </div>
+
+               
+
             <div className="st-height-b50 st-height-lg-b30"></div>
 
             <div className="st-resume-timeline-wrap">
-              <div className="st-resume-timeline">
-                <h3 className="st-resume-timeline-title">Master of Computer Science</h3>
-                <div className="st-resume-timeline-duration">2015 - 2016</div>
-                <h4 className="st-resume-timeline-subtitle">University of XYZ</h4>
-                <div className="st-resume-timeline-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                    ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
-                </div>
-              </div>
+
+            {
+                    education.education.map((item,index)=>(
+                      <>
+                      {index !== 0 && <div  className="st-height-b50 st-height-lg-b30"></div>}
+                        <div key={index} className="st-resume-timeline">
+                      <h3 className="st-resume-timeline-title">{item.degree}</h3>
+                      <div className="st-resume-timeline-duration">{item.year}</div>
+                      <h4 className="st-resume-timeline-subtitle">{item.institution}</h4>
+                      <div className="st-resume-timeline-text">
+                        <p>{item.description}</p>
+                      </div>
+                    </div>
+                      
+                      </>
+                    ))
+                  }
+
+            
                {/* <!-- st-resume-timeline --> */}
-              <div className="st-height-b50 st-height-lg-b30"></div>
+              {/* <div className="st-height-b50 st-height-lg-b30"></div>
               <div className="st-resume-timeline">
                 <h3 className="st-resume-timeline-title">Bachelor of Computer Science</h3>
                 <div className="st-resume-timeline-duration">2010 - 2014</div>
@@ -405,9 +434,9 @@ export const Home = () => {
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                     ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
                 </div>
-              </div> 
+              </div>  */}
               {/* <!-- st-resume-timeline --> */}
-              <div className="st-height-b50 st-height-lg-b30"></div>
+              {/* <div className="st-height-b50 st-height-lg-b30"></div>
               <div className="st-resume-timeline">
                 <h3 className="st-resume-timeline-title">Diploma in Computer Science</h3>
                 <div className="st-resume-timeline-duration">2006 - 2010</div>
@@ -416,7 +445,7 @@ export const Home = () => {
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                     ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
                 </div>
-              </div> 
+              </div>  */}
               {/* <!-- st-resume-timeline --> */}
             </div>
           </div>
