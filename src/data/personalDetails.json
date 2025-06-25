@@ -6,7 +6,14 @@
     "age":"23",
     "phone":"+91 97460 70802",
     "email":"husnimubarakvattoli1@gmail.com",
-    "address":"2661 Hich meadow lane bear creek",
+    "address":{
+      "street":"213, Ponmala PO, Ponmala",
+      "city":"Malappuram",
+      "state":"Kerala",
+      "country":"India",
+      "pincode":"676528"
+    },
+    "Location":"https://maps.app.goo.gl/zJ8bo12qJBki6fPw9",
     "profession":"Web Developer",
     "Birthday":"  May 20, 2002",
     "Gender":"Male",

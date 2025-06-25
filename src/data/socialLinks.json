@@ -1,28 +1,29 @@
 {
   "socialLinks": [
     {
-      "iconClass": "fab fa-dribbble",
-      "name": "Dribbble",
-      "url": "#",
+      "iconClass": "fab fa-github",
+      "name": "Github",
+      "url": "https://github.com/mubarak-v",
       "active": false
     },
     {
-      "iconClass": "fab fa-behance",
-      "name": "Behance",
-      "url": "#",
-      "active": false
-    },
-    {
-      "iconClass": "fab fa-twitter",
-      "name": "Twitter",
-      "url": "#",
+      "iconClass": "fab fa-instagram",
+      "name": "Instagram",
+      "url": "https://www.instagram.com/husni.mubarak._?igsh=MXF2MGFwYmdqdnJ0ZQ==",
       "active": false
     },
     {
       "iconClass": "fab fa-linkedin",
       "name": "LinkedIn",
-      "url": "#",
+      "url": "https://www.linkedin.com/in/husni-mubarak-v/",
+      "active": false
+    },
+    {
+      "iconClass": "fab fa-twitter",
+      "name": "Twitter",
+      "url": "https://x.com/husni_mubarak_v?t=QcilckH3zSl1Ddx9GmHCug&s=09",
       "active": false
     }
+    
   ]
 }

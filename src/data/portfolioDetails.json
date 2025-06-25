@@ -1,0 +1,30 @@
+{
+    "projects": [
+      {
+        "title": "DDTrade",
+        "description": "A trading-focused web app designed for fast market insights and stock tracking, with a clean UI and responsive layout.",
+        "technologies": ["Python", "Django"],
+        "github": "https://github.com/mubarak-v/DDTrade",
+        "cover": "DDTrade.png",
+        "status": "In Progress"
+      },
+      {
+        "title": "Best Time",
+        "description": "A simple React-based timing app for productivity and task focus. Great for planning, breaks, and improving work sessions.",
+        "technologies": ["React", "CSS", "JavaScript"],
+        "github": "https://github.com/mubarak-v/Best_time",
+        "cover": "BestTime.png",
+        "status": "Completed"
+      },
+      {
+        "title": "WAGroupExtractor",
+        "description": "A utility tool for extracting WhatsApp group data using automation techniques. Built for internal use and contact analytics.",
+        "technologies": ["Python"],
+        "github": "https://github.com/mubarak-v/WAGroupExtractor",
+        "cover": "WAGroupExtractor.png",
+        "status": "Completed"
+      }
+      
+    ]
+  }
+  

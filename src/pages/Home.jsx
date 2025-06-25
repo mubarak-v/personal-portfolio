@@ -1,14 +1,19 @@
 import React, { useEffect } from "react";
 import 'jquery.ripples';
+import $ from 'jquery';
+import { useRef } from 'react';
+import emailjs from 'emailjs-com';
+
 import socialLinksData from '../data/socialLinks.json';
 import personalData from '../data/personalDetails.json';
+import portfolioData from '../data/portfolioDetails.json'
 import service from '../data/services.json'
 import education from '../data/qualifications.json'
 import skills from '../data/skills.json'
-import heroImg from  "../assets/img/section/hero-img.jpg";
+import heroImg from  "../assets/img/personal/husni_mubarak_3.png";
 import experience from '../data/experience.json'
 import logo from "../assets/img/logo.png";
-import aboutImg from "../assets/img/section/about.jpg";
+import aboutImg from "../assets/img/personal/husni_mubarak_4.png";
 import quote from "../assets/img/icon/quote.png";
 import client1 from "../assets/img/client/client1.png";
 import client2 from "../assets/img/client/client2.png";
@@ -18,11 +23,11 @@ import blog2 from "../assets/img/blog/blog2.jpg";
 import blog3 from "../assets/img/blog/blog3.jpg";
 import resumeIcon1 from "../assets/img/icon/resume-icon1.png";
 import resumeIcon2 from "../assets/img/icon/resume-icon2.png";
-import portfolio1 from "../assets/img/portfolio/portfolio1.jpg";
-import portfolio2 from "../assets/img/portfolio/portfolio2.jpg";
+import DDTrade from "../assets/img/project_cover_photo/DDTrade.png"
+import portfolio2 from "../assets/img/project_cover_photo/BestTime.png"
 import portfolio1Lg from "../assets/img/portfolio/portfolio1_lg.jpg";
 import portfolio2Lg from "../assets/img/portfolio/portfolio2_lg.jpg";
-import portfolio3 from "../assets/img/portfolio/portfolio3.jpg";
+import portfolio3 from "../assets/img/project_cover_photo/WAGroupExtractor.png"
 import portfolio3Lg from "../assets/img/portfolio/portfolio3_lg.jpg";
 import portfolio4 from "../assets/img/portfolio/portfolio4.jpg";
 import portfolio4Lg from "../assets/img/portfolio/portfolio4_lg.jpg";
@@ -38,6 +43,35 @@ import portfolio6Lg from "../assets/img/portfolio/portfolio6_lg.jpg";
 
 
 export const Home = () => {
+
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log("button is working");
+  
+
+ 
+
+        // Send to YOU (receiver mail)
+    emailjs.sendForm(
+      'service_673aoax',
+      'template_yg7vkuf',        // ✅ This is your existing auto-reply template
+      form.current,
+      'OP5e_ufdh-BGjw_Nw'
+    ).then(() => {
+      if (typeof e.target.name.value !== 'undefined') {
+        alert(`✅ Message sent successfully! \n\nThank you for contacting me ${e.target.name.value}. I will get back to you as soon as possible!`);
+      } else {
+        alert(`✅ Message sent successfully! \n\nThank you for contacting me. I will get back to you as soon as possible!`);
+      }
+      e.target.reset();
+    }).catch((error) => {
+      console.error("Auto-reply error:", error);
+    });
+  };
+  
 
   useEffect(() => {
     // Initialize jQuery and jQuery UI after component mounts
@@ -466,109 +500,53 @@ export const Home = () => {
       </div>
       <div className="st-height-b25 st-height-lg-b25"></div>
     </div>
+
+
     <div className="container">
       <div className="row">
-        <div className="col-lg-4 col-md-6">
+
+
+        {portfolioData.projects.map((item,index)=>(
+          <>
+             <div className="col-lg-4 col-md-6">
           <div className="st-portfolio-single st-style1 st-lightgallery">
             <div className="st-portfolio-item">
-              <a href={portfolio1Lg} className="st-portfolio st-zoom st-lightbox-item">
+              <a href={item.github} className="st-portfolio st-zoom st-lightbox-item">
                 <div className="st-portfolio-img st-zoom-in">
-                  <img src={portfolio1} alt="portfolio"/>
+                  <img src={`/assets/img/project_cover_photo/${item.cover}`} alt={item.title}/>
                 </div>
                 <div className="st-portfolio-item-hover">
                   <i className="fas fa-plus-circle"></i>
-                  <h5>Product Design</h5>
-                  <p>Design / Marketing</p>
+                  <h5>{item.title}</h5>
+                  <p>{item.technologies.join(', ')}</p>
                 </div>
               </a>
             </div>
           </div>
         </div>
-        <div className="col-lg-4 col-md-6">
-          <div className="st-portfolio-single st-style1 st-lightgallery">
-            <div className="st-portfolio-item">
-              <a href={portfolio2Lg} className="st-portfolio st-zoom st-lightbox-item">
-                <div className="st-portfolio-img st-zoom-in">
-                  <img src={portfolio2} alt="portfolio" />
-                </div>
-                <div className="st-portfolio-item-hover">
-                  <i className="fas fa-plus-circle"></i>
-                  <h5>Product Design</h5>
-                  <p>Design / Marketing</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-6">
-          <div className="st-portfolio-single st-style1 st-lightgallery">
-            <div className="st-portfolio-item">
-              <a href={portfolio3Lg} className="st-portfolio st-zoom st-lightbox-item">
-                <div className="st-portfolio-img st-zoom-in">
-                  <img src={portfolio3} alt="portfolio" />
-                </div>
-                <div className="st-portfolio-item-hover">
-                  <i className="fas fa-plus-circle"></i>
-                  <h5>Product Design</h5>
-                  <p>Design / Marketing</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-6">
-          <div className="st-portfolio-single st-style1 st-lightgallery">
-            <div className="st-portfolio-item">
-              <a href={portfolio4Lg} className="st-portfolio st-zoom st-lightbox-item">
-                <div className="st-portfolio-img st-zoom-in">
-                  <img src={portfolio4} alt="portfolio" />
-                </div>
-                <div className="st-portfolio-item-hover">
-                  <i className="fas fa-plus-circle"></i>
-                  <h5>Product Design</h5>
-                  <p>Design / Marketing</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-6">
-          <div className="st-portfolio-single st-style1 st-lightgallery">
-            <div className="st-portfolio-item">
-              <a href={portfolio5Lg} className="st-portfolio st-zoom st-lightbox-item">
-                <div className="st-portfolio-img st-zoom-in">
-                  <img src={portfolio5} alt="portfolio" />
-                </div>
-                <div className="st-portfolio-item-hover">
-                  <i className="fas fa-plus-circle"></i>
-                  <h5>Product Design</h5>
-                  <p>Design / Marketing</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-6">
-          <div className="st-portfolio-single st-style1 st-lightgallery">
-            <div className="st-portfolio-item">
-              <a href={portfolio6Lg} className="st-portfolio st-zoom st-lightbox-item">
-                <div className="st-portfolio-img st-zoom-in">
-                  <img src={portfolio6} alt="portfolio" />
-                </div>
-                <div className="st-portfolio-item-hover">
-                  <i className="fas fa-plus-circle"></i>
-                  <h5>Product Design</h5>
-                  <p>Design / Marketing</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-12 text-center">
-          <div className="st-portfolio-btn">
-            <a href="#" className="st-btn st-style1 st-color1">Load More</a>
-          </div>
-        </div>
+          </>
+        ))
+
+        }
+     
+
+
+     
+
+
+
+     {portfolioData.projects.length > 6 && (
+       <div className="col-lg-12 text-center">
+       <div className="st-portfolio-btn">
+         <a href="#" className="st-btn st-style1 st-color1">Load More</a>
+       </div>
+     </div>
+
+       
+     )}
+
+       
+
       </div>
     </div>
     <div className="st-height-b100 st-height-lg-b80"></div>
@@ -579,7 +557,7 @@ export const Home = () => {
   {/* <!-- End Review Seciton -->
 
   <!-- Start Blog Seciton --> */}
-  <section id="blog">
+  {/* <section id="blog">
     <div className="st-height-b100 st-height-lg-b80"></div>
     <div className="container">
       <div className="st-section-heading st-style1">
@@ -587,11 +565,11 @@ export const Home = () => {
         <h2 className="st-section-heading-subtitle">LATEST NEWS</h2>
       </div>
       <div className="st-height-b25 st-height-lg-b25"></div>
-    </div>
+    </div> */}
 
     {/* <!-- Latest News Container --> */}
 
-    <div className="container">
+    {/* <div className="container">
       <div className="row st-grid-layout">
         <div className="col-lg-4 col-md-6 st-grid-item">
           <div className="st-post-single st-style1">
@@ -643,7 +621,7 @@ export const Home = () => {
         </div>
       </div>
     </div>
-  </section>
+  </section> */}
 
 
 
@@ -669,22 +647,37 @@ export const Home = () => {
       <div className="row">
         <div className="col-lg-6">
           <h3 className="st-contact-title">Just say Hello</h3>
-          <div id="st-alert"></div>
-          <form action="#" method="POST" className="st-contact-form" id="contact-form">
-            <div className="st-form-field">
-              <input type="text" id="name" name="name" placeholder="Your Name" required />
-            </div>
-            <div className="st-form-field">
-              <input type="text" id="email" name="email" placeholder="Your Email" required />
-            </div>
-            <div className="st-form-field">
-              <input type="text" id="subject" name="subject" placeholder="Your Subject" required />
-            </div>
-            <div className="st-form-field">
-              <textarea cols="30" rows="10" id="msg" name="msg" placeholder="Your Message" required></textarea>
-            </div>
-            <button className="st-btn st-style1 st-color1" type="submit" id="submit" name="submit">Send message</button>
-          </form>
+          <div id="st-alert"></div>      
+    
+          <form
+      ref={form}
+      onSubmit={sendEmail}
+      className="st-contact-form"
+      id="contact-form"
+    >
+      <div className="st-form-field">
+        <input type="text" id="name" name="from_name" placeholder="Your Name" required />
+      </div>
+      <div className="st-form-field">
+        <input type="email" id="email" name="from_email" placeholder="Your Email" required />
+      </div>
+      <div className="st-form-field">
+        <input type="text" id="subject" name="subject" placeholder="Your Subject" required />
+      </div>
+      <div className="st-form-field">
+        <textarea
+          cols="30"
+          rows="10"
+          id="msg"
+          name="message"  
+          placeholder="Your Message"
+          required
+        ></textarea>
+      </div>
+      <button className="st-btn st-style1 st-color1" type="submit" id="submit" name="submit" onClick={sendEmail}>
+        Send message
+      </button>
+    </form>
         </div>
         <div className="st-height-b0 st-height-lg-b30"></div>
 
@@ -692,84 +685,70 @@ export const Home = () => {
           <div className="st-height-b0 st-height-lg-b40"></div>
           <h3 className="st-contact-title">Contact Info</h3>
           <div className="st-contact-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla tincidunt id faucibus sed
-            suscipit feugiat.
+          Feel free to reach out for collaborations, projects, or just to say hello. I'm always open to new opportunities and creative ideas.
           </div>
           <div className="st-contact-info-wrap">
             <div className="st-single-contact-info">
-              <i className="fas fa-envelope"></i>
+             
+            <a href={`mailto:${personalData.email}`}>
+  <i className="fas fa-envelope"></i>
+</a>
+
               <div className="st-single-info-details">
                 <h4>Email</h4>
-                <a href="#">devis@example.com</a>
-                <a href="#">info@support.com</a>
+                <a href={`mailto:${personalData.email}`}>{personalData.email}</a>
+                {/* <a href="#">info@support.com</a> */}
               </div>
             </div>
             <div className="st-single-contact-info">
-              <i className="fas fa-phone-alt"></i>
+            <a href={`tel:${personalData.phone}`}>
+  <i className="fas fa-phone-alt"></i>
+</a>
               <div className="st-single-info-details">
                 <h4>Phone</h4>
-                <span>+1 876-369-9009</span>
-                <span>+1 213-519-1786</span>
+                <a href={`tel:${personalData.phone}`}>{personalData.phone}</a>
+                {/* <span>+1 213-519-1786</span> */}
               </div>
             </div>
             <div className="st-single-contact-info">
-              <i className="fas fa-map-marker-alt"></i>
+            <a href={personalData.Location} target="_blank" rel="noopener noreferrer">
+  <i className="fas fa-map-marker-alt"></i>
+</a>
               <div className="st-single-info-details">
                 <h4>Address</h4>
-                <span>2661 High Meadow Lane Bear Creek, <br />Olancha, KY 93544</span>
+                <a
+  href={personalData.Location}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span>
+    {personalData.address.street} <br />
+    {personalData.address.city}, {personalData.address.state} {personalData.address.pincode}
+  </span>
+</a>
               </div>
             </div>
             <div className="st-social-info">
               <div className="st-social-text">Visite my social profile and get connected</div>
               <div className="st-social-link">
-                <a href="#" className="st-social-btn active">
-                  <span className="st-social-icon"><i className="fab fa-dribbble"></i></span>
-                  <span className="st-icon-name">Dribbble</span>
-                </a>
-                <a href="#" className="st-social-btn">
-                  <span className="st-social-icon"><i className="fab fa-behance"></i></span>
-                  <span className="st-icon-name">Behance</span>
-                </a>
-                <a href="#" className="st-social-btn">
-                  <span className="st-social-icon"><i className="fab fa-twitter"></i></span>
-                  <span className="st-icon-name">Twitter</span>
-                </a>
-                <a href="#" className="st-social-btn">
-                  <span className="st-social-icon"><i className="fab fa-linkedin"></i></span>
-                  <span className="st-icon-name">LinkedIn</span>
-                </a>
+              {socialLinksData.socialLinks.map((link, index) => (
+            <a 
+              key={index}
+              href={link.url}
+              className={`st-social-btn ${link.active ? 'active' : ''}`}
+            >
+              <span className="st-social-icon">
+                <i className={link.iconClass}></i>
+              </span>
+              <span className="st-icon-name">{link.name}</span>
+            </a>
+          ))}
+
               </div>
             </div>
           </div>
         </div>
-        <div className="col-12 col-md-6 col-lg-4">
-          <div className="st-height-b0 st-height-lg-b40"></div>
-          <h3 className="st-contact-title">My Blog</h3>
-          <div className="st-contact-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla tincidunt id faucibus sed
-            suscipit feugiat.
-          </div>
-          <div className="st-contact-info-wrap">
-            <div className="st-single-contact-info">
-              <a href="#" className="st-contact-single">
-                <h4>My Blog</h4>
-                <p>Read my latest blog posts</p>
-              </a>
-            </div>
-            <div className="st-single-contact-info">
-              <a href="#" className="st-contact-single">
-                <h4>My Blog</h4>
-                <p>Read my latest blog posts</p>
-              </a>
-            </div>
-            <div className="st-single-contact-info">
-              <a href="#" className="st-contact-single">
-                <h4>My Blog</h4>
-                <p>Read my latest blog posts</p>
-              </a>
-            </div>
-          </div>
-        </div>
+  
       </div>
     </div>
     <div className="st-height-b100 st-height-lg-b80"></div>
@@ -780,7 +759,7 @@ export const Home = () => {
   <footer>
     <div className="container">
       <div className="st-copyright-wrap text-center">
-        <div className="st-copyright-text">© 2020. Designed by Laralink. All right reserved.</div>
+        <div className="st-copyright-text">© 2025 Husni Mubarak. Built with  using React & passion.</div>
       </div>
     </div>
   </footer>
