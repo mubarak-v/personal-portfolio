@@ -16,6 +16,13 @@ import '../src/assets/sass/style.scss'
 // import '../src/assets/sass/elements/_variables.scss'
 // import '../src/assets/sass/elements/_work.scss'
 // import '../src/assets/sass/elements/_work.scss'
+// Global Styles
+import './assets/sass/style.scss';
+import './assets/css/animate.css';
+import './assets/css/bootstrap.min.css';
+import './assets/css/fontawesome.css';
+import './assets/css/style.css';
+import './assets/css/slick.css';
 
 import App from './App.jsx'
 
