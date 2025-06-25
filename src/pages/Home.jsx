@@ -14,8 +14,8 @@ import heroImg from "../assets/img/personal/husni_mubarak_3.png";
 import experience from '../data/experience.json'
 import logo from "../assets/img/logo/husni_mubarak_logo_3.png";
 import aboutImg from "../assets/img/personal/husni_mubarak_4.png";
-// import resumeIcon1 from "../assets/img/icon/resume-icon1.png";
-// import resumeIcon2 from "../assets/img/icon/resume-icon2.png";
+import resumeIcon1 from "../assets/img/icon/resume-icon1.png";
+import resumeIcon2 from "../assets/img/icon/resume-icon2.png";
 
 // main.jsx or App.jsx
 import '../assets/css/style.css';
