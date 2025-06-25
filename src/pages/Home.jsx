@@ -16,7 +16,7 @@ import logo from "../assets/img/logo/husni_mubarak_logo_3.png";
 import aboutImg from "../assets/img/personal/husni_mubarak_4.png";
 import resumeIcon1 from "../assets/img/icon/resume-icon1.png";
 import resumeIcon2 from "../assets/img/icon/resume-icon2.png";
-
+import cv from "/assets/cv/Husni-Mubarak-V.pdf"
 // main.jsx or App.jsx
 import '../assets/css/style.css';
 import '../assets/css/bootstrap.min.css';
@@ -28,16 +28,10 @@ import '../assets/css/lightgallery.min.css';
 // You can also import SCSS if sass is installed
 import '../assets/sass/style.scss'; // This should @use all other scss partials
 
-
-
-
-
-
 export const Home = () => {
-
+  
 
   const form = useRef();
-
   const sendEmail = (e) => {
     e.preventDefault();
     console.log("button is working");
@@ -117,7 +111,13 @@ export const Home = () => {
                       <li><a href="#about" className="st-smooth-move">About</a></li>
                       <li><a href="#resume" className="st-smooth-move">Resume</a></li>
                       <li><a href="#portfolio" className="st-smooth-move">Portfolio</a></li>
-                      <li><a href="#blog" className="st-smooth-move">Blog</a></li>
+                      <li>
+                        <a href="#blog" className="st-smooth-move"
+                           title="Coming soon..."
+                           data-tooltip="Coming soon...">
+                          Blog
+                        </a>
+                      </li>
                       <li><a href="#contact" className="st-smooth-move">Contact</a></li>
                     </ul>
                     <div className="sp-phone">
@@ -128,7 +128,7 @@ export const Home = () => {
                           </g>
                         </g>
                       </svg>
-                      <div className="sp-phone-no">{personalData.phone}</div>
+                     <a href={personalData.phone} className="sp-phone-no">{personalData.phone}</a>
                     </div>
                   </div>
                 </div>
@@ -214,7 +214,7 @@ export const Home = () => {
                         <li><span>Language</span> : <span>{personalData.Language}</span></li>
                       </ul>
                       <div className="st-text-block-btn">
-                        <a href="#" className="st-btn st-style1 st-color1">Download CV</a>
+                        <a href={cv} download className="st-btn st-style1 st-color1">Download CV</a>
                       </div>
                     </div>
                   </div>
@@ -580,7 +580,7 @@ export const Home = () => {
           <div className="container">
             <div className="row">
               <div className="col-lg-6">
-                <h3 className="st-contact-title">Just say Hello</h3>
+                <h3 className="st-contact-title">Let’s Talk </h3>
                 <div id="st-alert"></div>
 
                 <form

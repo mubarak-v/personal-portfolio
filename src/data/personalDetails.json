@@ -1,32 +1,26 @@
-
 {
-    "firstname":"Husni ",
-    "lastname":"Mubarak",
-    
-    "age":"23",
-    "phone":"+91 97460 70802",
-    "email":"husnimubarakvattoli1@gmail.com",
-    "address":{
-      "street":"213, Ponmala PO, Ponmala",
-      "city":"Malappuram",
-      "state":"Kerala",
-      "country":"India",
-      "pincode":"676528"
-    },
-    "Location":"https://maps.app.goo.gl/zJ8bo12qJBki6fPw9",
-    "profession":"Web Developer",
-    "Birthday":"  May 20, 2002",
-    "Gender":"Male",
-    "Nationality":"Indian",
-    
-    "Discription":"I specialize in Python, Django, Flask, React, HTML, CSS, and JavaScript to build dynamic, user-friendly web applications. Alongside development, I also work on digital marketing strategies to help businesses grow their online presence. Whether you're looking for custom web development or full digital solutions, I deliver high-performance, scalable results tailored to your business needs. Explore my portfolio to see impactful projects and discover how I can help bring your ideas to life", 
-    "Language":"English, Malayalam",
-    "skillsHeading": "Skills I'm learning, building, and growing every day.",
-    "skillsDescription": {
-          "paragraph1": "I work with Python, Django, Flask, React, HTML, CSS, and JavaScript to build fast and reliable web applications. From backend logic to frontend components, I enjoy bringing ideas to life through code.",
-          "paragraph2": "Alongside development, I also apply digital marketing skills to help businesses improve their online reach through basic SEO, social media strategies, and content promotion."
-        }
-      
-      
-      
+  "firstname": "Husni ",
+  "lastname": "Mubarak",
+  "age": "23",
+  "phone": "+91 97460 70802",
+  "email": "husnimubarakvattoli1@gmail.com",
+  "address": {
+    "street": "213, Ponmala PO, Ponmala",
+    "city": "Malappuram",
+    "state": "Kerala",
+    "country": "India",
+    "pincode": "676528"
+  },
+  "Location": "https://maps.app.goo.gl/zJ8bo12qJBki6fPw9",
+  "profession": "Web Developer",
+  "Birthday": "  May 20, 2002",
+  "Gender": "Male",
+  "Nationality": "Indian",
+  "Discription": "I specialize in Python, Django, Flask, React, HTML, CSS, and JavaScript to build dynamic, user-friendly web applications. In addition to development, I also work on digital marketing strategies to help businesses grow their online presence. Whether you're looking for custom web development or comprehensive digital solutions, I deliver high-performance, scalable results tailored to your business needs. Explore my portfolio to see impactful projects and discover how I can help bring your ideas to life.",
+  "Language": "English, Malayalam",
+  "skillsHeading": "Skills I'm learning, building, and growing every day.",
+  "skillsDescription": {
+    "paragraph1": "I work with Python, Django, Flask, React, HTML, CSS, and JavaScript to build fast and reliable web applications. From backend logic to frontend components, I enjoy bringing ideas to life through code.",
+    "paragraph2": "Alongside development, I also apply digital marketing skills to help businesses improve their online reach through basic SEO, social media strategies, and content promotion."
+  }
 }
