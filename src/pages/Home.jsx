@@ -12,7 +12,7 @@ import education from '../data/qualifications.json'
 import skills from '../data/skills.json'
 import heroImg from  "../assets/img/personal/husni_mubarak_3.png";
 import experience from '../data/experience.json'
-import logo from "../assets/img/logo.png";
+import logo from "../assets/img/logo/husni_mubarak_logo_3.png";
 import aboutImg from "../assets/img/personal/husni_mubarak_4.png";
 import quote from "../assets/img/icon/quote.png";
 import client1 from "../assets/img/client/client1.png";
